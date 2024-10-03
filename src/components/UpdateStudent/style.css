@@ -1,0 +1,104 @@
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-out;
+  z-index: 100;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-header {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+.label-input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+label {
+  flex: 1;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+input,
+select {
+  flex: 2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s;
+  font-size: 16px; 
+  width: 90%;
+}
+
+input:focus,
+.label-input-group select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+button.update {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+button.cancel {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-header {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
